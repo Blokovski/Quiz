@@ -1,28 +1,11 @@
 package com.outland.quiz;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-
 import com.outland.quiz.model.Game;
-import com.outland.quiz.model.Parser;
 import com.outland.quiz.model.Question;
 
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.os.Handler;
-import android.os.Handler.Callback;
-import android.os.Message;
 import android.app.Activity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -52,8 +35,7 @@ public class MainActivity extends Activity
 		game = new Game();
 		setQuestion(game.getActualQuestion());
 		
-		  
-		  
+	  
 		timer = new QuizTimer(30000, 1000)
 		{
 			
@@ -77,10 +59,6 @@ public class MainActivity extends Activity
 		
 		  
 	}
-
-	
-		
-
 	
 	private void setQuestion(Question q)
 	{
@@ -133,7 +111,7 @@ public class MainActivity extends Activity
 	private void correctAnswer()
 	{
 		Toast.makeText(App.getContext(), "Tacan odgovor", Toast.LENGTH_SHORT).show();
-		game.setScore(100);
+		game.addScore();
 		game.setQuestionPosition(true);
 		setQuestion(game.getActualQuestion());
 	}

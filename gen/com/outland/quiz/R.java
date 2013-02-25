@@ -41,9 +41,10 @@ public final class R {
         public static final int btnThree=0x7f090005;
         public static final int btnTwo=0x7f090004;
         public static final int linearLayout1=0x7f090002;
-        public static final int menu_settings=0x7f090008;
+        public static final int menu_settings=0x7f090009;
         public static final int tvAnsvers=0x7f090001;
         public static final int tvQuestion=0x7f090000;
+        public static final int tvScore=0x7f090008;
         public static final int tvTimer=0x7f090007;
     }
     public static final class layout {

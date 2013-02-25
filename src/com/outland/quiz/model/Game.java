@@ -35,7 +35,7 @@ public class Game
 
 	public int addScore()
 	{
-
+		score += Rules.MEDIUM_POINTS;
 		return score;
 	}
 
