@@ -6,6 +6,7 @@ import com.outland.quiz.model.Question;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ public class MainActivity extends Activity
 	TextView tvQuestion;
 	TextView tvAnswers;
 	TextView tvTimer;
+	TextView tvScore;
 	Game game;
 	QuizTimer timer;
 	long remainTime;
@@ -28,11 +30,13 @@ public class MainActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 		tvQuestion = (TextView) findViewById(R.id.tvQuestion);
 		tvAnswers = (TextView) findViewById(R.id.tvAnsvers);
 		tvTimer = (TextView) findViewById(R.id.tvTimer);
+		tvScore = (TextView) findViewById(R.id.tvScore);
 		
-		game = new Game();
+		game = App.getGame();
 		setQuestion(game.getActualQuestion());
 		
 	  
@@ -89,7 +93,9 @@ public class MainActivity extends Activity
 	
 	public void gameOver()
 	{
-		Toast.makeText(App.getContext(), "GAME OVER!!!", Toast.LENGTH_SHORT).show();
+		this.finish();
+		Intent i = new Intent(this, EndGameActivity.class);
+		startActivity(i);
 	}
 	
 	public void onClickAnswer(View view)
@@ -112,12 +118,37 @@ public class MainActivity extends Activity
 	{
 		Toast.makeText(App.getContext(), "Tacan odgovor", Toast.LENGTH_SHORT).show();
 		game.addScore();
+		updateScore();
 		game.setQuestionPosition(true);
-		setQuestion(game.getActualQuestion());
+		game.incNumberOfAnsweredQuestion();
+		game.incTrueAnswers();
+		//setQuestion(game.getActualQuestion());
+		endCheck();
+	}
+	
+	private void endCheck()
+	{
+		if (game.getNumberOfAnsweredQuestions() < game.getNumberOfQuestion())
+		{
+			setQuestion(game.getActualQuestion());
+		}
+		else
+		{
+			gameOver();
+		}
 	}
 	
 	private void wrongAnswer()
 	{
-		Toast.makeText(App.getContext(), "Hajde ponovo", Toast.LENGTH_SHORT).show();
+		//Toast.makeText(App.getContext(), "Hajde ponovo", Toast.LENGTH_SHORT).show();
+		game.setQuestionPosition(true);
+		game.incNumberOfAnsweredQuestion();
+		game.incFalseAnswers();
+		endCheck();
+	}
+	
+	private void updateScore()
+	{
+		tvScore.setText(String.valueOf(game.getScore()));
 	}
 }

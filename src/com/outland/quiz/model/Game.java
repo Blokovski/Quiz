@@ -11,6 +11,9 @@ public class Game
 
 	private Question actualQuestion;
 	private int questionPosition = 0;
+	
+	private int trueAnswers;
+	private int falseAnswers;
 
 	private int difficulty;
 	private String playerName;
@@ -25,7 +28,26 @@ public class Game
 
 		json = Util.getStringFromJsonResource();
 		questions = Parser.parseQuestion(json);
+		numberOfAnsweredQuestions = 0;
+		trueAnswers = 0;
+		setFalseAnswers(0);
 		setActualQuestion();
+		setNumberOfQuestion();
+	}
+	
+	public void incNumberOfAnsweredQuestion()
+	{
+		this.numberOfAnsweredQuestions ++;
+	}
+	
+	public void incTrueAnswers()
+	{
+		this.trueAnswers ++;
+	}
+	
+	public void incFalseAnswers()
+	{
+		this.setFalseAnswers(this.getFalseAnswers() + 1);
 	}
 
 	public void setActualQuestion()
@@ -54,9 +76,12 @@ public class Game
 		return numberOfQuestion;
 	}
 
-	public void setNumberOfQuestion(int numberOfQuestion)
+	private  void setNumberOfQuestion()
 	{
-		this.numberOfQuestion = numberOfQuestion;
+		if (questions!= null)
+		{
+			this.numberOfQuestion = questions.size();
+		}
 	}
 
 	public int getNumberOfAnsweredQuestions()
@@ -64,10 +89,6 @@ public class Game
 		return numberOfAnsweredQuestions;
 	}
 
-	public void setNumberOfAnsweredQuestions(int numberOfAnsweredQuestions)
-	{
-		this.numberOfAnsweredQuestions = numberOfAnsweredQuestions;
-	}
 
 	public int getDifficulty()
 	{
@@ -138,6 +159,28 @@ public class Game
 		{
 			this.questionPosition--;
 		}
+	}
+
+	public int getTrueAnswers()
+	{
+		return trueAnswers;
+	}
+
+	public void setTrueAnswers(int trueAnswers)
+	{
+		this.trueAnswers = trueAnswers;
+	}
+
+	
+
+	public int getFalseAnswers()
+	{
+		return falseAnswers;
+	}
+
+	public void setFalseAnswers(int falseAnswers)
+	{
+		this.falseAnswers = falseAnswers;
 	}
 
 }

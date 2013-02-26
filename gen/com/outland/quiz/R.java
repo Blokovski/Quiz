@@ -30,26 +30,39 @@ public final class R {
         public static final int yellow=0x7f05000a;
     }
     public static final class drawable {
-        public static final int button_gray=0x7f020000;
-        public static final int button_pink=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int main_button_selector=0x7f020003;
+        public static final int black_button=0x7f020000;
+        public static final int button_gray=0x7f020001;
+        public static final int button_pink=0x7f020002;
+        public static final int button_selector=0x7f020003;
+        public static final int green_button=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int main_button_selector=0x7f020006;
     }
     public static final class id {
-        public static final int btnFour=0x7f090006;
-        public static final int btnOne=0x7f090003;
-        public static final int btnThree=0x7f090005;
-        public static final int btnTwo=0x7f090004;
-        public static final int linearLayout1=0x7f090002;
-        public static final int menu_settings=0x7f090009;
-        public static final int tvAnsvers=0x7f090001;
-        public static final int tvQuestion=0x7f090000;
-        public static final int tvScore=0x7f090008;
-        public static final int tvTimer=0x7f090007;
+        public static final int btnFour=0x7f09000a;
+        public static final int btnOne=0x7f090007;
+        public static final int btnThree=0x7f090009;
+        public static final int btnTwo=0x7f090008;
+        public static final int exitBtn=0x7f090010;
+        public static final int linearLayout1=0x7f090000;
+        public static final int linearLayout2=0x7f090002;
+        public static final int menu_settings=0x7f090011;
+        public static final int playBtn=0x7f09000d;
+        public static final int rulesBtn=0x7f09000f;
+        public static final int settingsBtn=0x7f09000e;
+        public static final int tvAnsvers=0x7f090006;
+        public static final int tvEndFalseAnswers=0x7f090004;
+        public static final int tvEndScore=0x7f090001;
+        public static final int tvEndTrueAnswers=0x7f090003;
+        public static final int tvQuestion=0x7f090005;
+        public static final int tvScore=0x7f09000b;
+        public static final int tvTimer=0x7f09000c;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int rounded=0x7f030001;
+        public static final int activity_endgame=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_start=0x7f030002;
+        public static final int rounded=0x7f030003;
     }
     public static final class menu {
         public static final int activity_main=0x7f080000;

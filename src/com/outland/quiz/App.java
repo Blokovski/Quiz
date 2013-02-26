@@ -1,5 +1,7 @@
 package com.outland.quiz;
 
+import com.outland.quiz.model.Game;
+
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
@@ -22,6 +24,8 @@ public class App extends Application
 	private static final String APP_SHARED_PREFS = "com.diwanee.if_preferences";
 	public static SharedPreferences appSharedPrefs;
 	public static Editor prefsEditor;
+	
+	private static Game game;
 
 	@Override
 	public void onCreate()
@@ -39,6 +43,7 @@ public class App extends Application
 		appSharedPrefs = getSharedPreferences(APP_SHARED_PREFS, Activity.MODE_PRIVATE);
 		prefsEditor = appSharedPrefs.edit();
 		mContext = this;
+		//game = new Game();
 		//gd = new GetData();
 		//bm = new BitmapManager();
 		// tracker = GoogleAnalyticsTracker.getInstance();
@@ -53,6 +58,16 @@ public class App extends Application
 	public static Context getContext()
 	{
 		return mContext;
+	}
+
+	public static Game getGame()
+	{
+		return game;
+	}
+
+	public static void setGame()
+	{
+		App.game = new Game();
 	}
 
 //	public static GetData getGetData()
