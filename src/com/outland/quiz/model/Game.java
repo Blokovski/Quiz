@@ -19,6 +19,10 @@ public class Game
 	private String playerName;
 	private int right;
 	private int wrong;
+	
+	private boolean helpHalf;
+	private boolean helpMoreTime;
+	private boolean helpSkip;
 
 	List<Question> questions = new ArrayList<Question>();
 	String json;
@@ -30,6 +34,9 @@ public class Game
 		questions = Parser.parseQuestion(json);
 		numberOfAnsweredQuestions = 0;
 		trueAnswers = 0;
+		helpHalf = true;
+		helpMoreTime= true;
+		helpSkip=true;
 		setFalseAnswers(0);
 		setActualQuestion();
 		setNumberOfQuestion();
@@ -181,6 +188,36 @@ public class Game
 	public void setFalseAnswers(int falseAnswers)
 	{
 		this.falseAnswers = falseAnswers;
+	}
+
+	public boolean isHelpHalf()
+	{
+		return helpHalf;
+	}
+
+	public void setHelpHalf(boolean helpHalf)
+	{
+		this.helpHalf = helpHalf;
+	}
+
+	public boolean isHelpMoreTime()
+	{
+		return helpMoreTime;
+	}
+
+	public void setHelpMoreTime(boolean helpMoreTime)
+	{
+		this.helpMoreTime = helpMoreTime;
+	}
+
+	public boolean isHelpSkip()
+	{
+		return helpSkip;
+	}
+
+	public void setHelpSkip(boolean helpSkip)
+	{
+		this.helpSkip = helpSkip;
 	}
 
 }

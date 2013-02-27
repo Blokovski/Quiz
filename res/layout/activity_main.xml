@@ -80,6 +80,7 @@
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -98,7 +99,6 @@
             android:id="@+id/tvScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            
             android:paddingLeft="10dp"
             android:text="0" />
     </LinearLayout>
@@ -121,6 +121,50 @@
             android:layout_marginTop="18dp"
             android:paddingLeft="10dp"
             android:text="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayoutHelps"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginTop="23dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnAddTimeHelp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_selector"
+            android:onClick="onClickHelpAddTime"
+            android:text="Add Time"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnHalfHelp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_selector"
+            android:onClick="onClickHelpHalf"
+            android:text="50:50"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnSkipHelp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_selector"
+            android:onClick="onClickHelpSkip"
+            android:text="Skip"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </RelativeLayout>

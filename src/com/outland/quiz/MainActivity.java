@@ -3,6 +3,7 @@ package com.outland.quiz;
 import java.util.List;
 import com.outland.quiz.model.Game;
 import com.outland.quiz.model.Question;
+import com.outland.quiz.model.Rules;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -40,7 +41,7 @@ public class MainActivity extends Activity
 		setQuestion(game.getActualQuestion());
 		
 	  
-		timer = new QuizTimer(30000, 1000)
+		timer = new QuizTimer(Rules.TIME, 1000)
 		{
 			
 			@Override
@@ -141,14 +142,43 @@ public class MainActivity extends Activity
 	private void wrongAnswer()
 	{
 		//Toast.makeText(App.getContext(), "Hajde ponovo", Toast.LENGTH_SHORT).show();
-		game.setQuestionPosition(true);
-		game.incNumberOfAnsweredQuestion();
-		game.incFalseAnswers();
-		endCheck();
+//		game.setQuestionPosition(true);
+//		game.incNumberOfAnsweredQuestion();
+//		game.incFalseAnswers();
+//		endCheck();
+		gameOver();
 	}
 	
 	private void updateScore()
 	{
 		tvScore.setText(String.valueOf(game.getScore()));
+	}
+	
+	public void onClickHelpAddTime(View view)
+	{
+		if (game.isHelpMoreTime())
+		{
+			timer.addTimeToCountDown(Rules.ADDITIONAL_TIME_ADD);
+			game.setHelpMoreTime(false);
+		}
+	}
+	
+	public void onClickHelpHalf(View view)
+	{
+		if (game.isHelpHalf())
+		{
+			
+		}
+	}
+	
+	public void onClickHelpSkip(View view)
+	{
+		if (game.isHelpSkip())
+		{
+			game.setQuestionPosition(true);
+			game.incNumberOfAnsweredQuestion();
+			game.setHelpSkip(false);
+			endCheck();
+		}
 	}
 }
