@@ -1,24 +1,33 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity" 
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:background="@layout/rounded"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:paddingLeft="10dp"
-        android:text="" />
+        android:text="Question goes here"
+        android:textStyle="bold" />
+    
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llAnswers"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/tvAnsvers"
+        android:orientation="vertical" >
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvAnsvers"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvQuestion"
         android:layout_marginTop="4dp"
         android:background="@layout/rounded"
         android:paddingLeft="10dp"
@@ -167,4 +176,6 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-</RelativeLayout>
+    
+
+</LinearLayout>

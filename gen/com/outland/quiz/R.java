@@ -39,29 +39,30 @@ public final class R {
         public static final int main_button_selector=0x7f020006;
     }
     public static final class id {
-        public static final int btnAddTimeHelp=0x7f09000f;
-        public static final int btnFour=0x7f09000a;
-        public static final int btnHalfHelp=0x7f090010;
-        public static final int btnOne=0x7f090007;
-        public static final int btnSkipHelp=0x7f090011;
-        public static final int btnThree=0x7f090009;
-        public static final int btnTwo=0x7f090008;
-        public static final int exitBtn=0x7f090015;
+        public static final int btnAddTimeHelp=0x7f090010;
+        public static final int btnFour=0x7f09000b;
+        public static final int btnHalfHelp=0x7f090011;
+        public static final int btnOne=0x7f090008;
+        public static final int btnSkipHelp=0x7f090012;
+        public static final int btnThree=0x7f09000a;
+        public static final int btnTwo=0x7f090009;
+        public static final int exitBtn=0x7f090016;
         public static final int linearLayout1=0x7f090000;
         public static final int linearLayout2=0x7f090002;
-        public static final int linearLayout3=0x7f09000b;
-        public static final int linearLayoutHelps=0x7f09000e;
-        public static final int menu_settings=0x7f090016;
-        public static final int playBtn=0x7f090012;
-        public static final int rulesBtn=0x7f090014;
-        public static final int settingsBtn=0x7f090013;
-        public static final int tvAnsvers=0x7f090006;
+        public static final int linearLayout3=0x7f09000c;
+        public static final int linearLayoutHelps=0x7f09000f;
+        public static final int llAnswers=0x7f090006;
+        public static final int menu_settings=0x7f090017;
+        public static final int playBtn=0x7f090013;
+        public static final int rulesBtn=0x7f090015;
+        public static final int settingsBtn=0x7f090014;
+        public static final int tvAnsvers=0x7f090007;
         public static final int tvEndFalseAnswers=0x7f090004;
         public static final int tvEndScore=0x7f090001;
         public static final int tvEndTrueAnswers=0x7f090003;
         public static final int tvQuestion=0x7f090005;
-        public static final int tvScore=0x7f09000c;
-        public static final int tvTimer=0x7f09000d;
+        public static final int tvScore=0x7f09000d;
+        public static final int tvTimer=0x7f09000e;
     }
     public static final class layout {
         public static final int activity_endgame=0x7f030000;
