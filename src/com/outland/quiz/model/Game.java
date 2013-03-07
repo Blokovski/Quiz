@@ -42,6 +42,22 @@ public class Game
 		setNumberOfQuestion();
 	}
 	
+	public int getAnswerPosition(Question q)
+	{
+		int pos = -1;
+		String corectAnswer = q.getCorectAnswer();
+		List<String> ans = q.getAnswers();
+		
+		for (int i = 0; i < ans.size(); i++)
+		{
+			if (corectAnswer.equals(ans.get(i)))
+			{
+				return i;
+			}
+		}
+		return pos;	
+	}
+	
 	public void incNumberOfAnsweredQuestion()
 	{
 		this.numberOfAnsweredQuestions ++;

@@ -1,6 +1,9 @@
 package com.outland.quiz;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 import com.outland.quiz.model.Game;
 import com.outland.quiz.model.Question;
 import com.outland.quiz.model.Rules;
@@ -24,7 +27,6 @@ public class MainActivity extends Activity
 {
 
 	TextView tvQuestion;
-	TextView tvAnswers;
 	TextView tvTimer;
 	TextView tvScore;
 	Game game;
@@ -39,7 +41,6 @@ public class MainActivity extends Activity
 		setContentView(R.layout.activity_main);
 
 		tvQuestion = (TextView) findViewById(R.id.tvQuestion);
-		tvAnswers = (TextView) findViewById(R.id.tvAnsvers);
 		tvTimer = (TextView) findViewById(R.id.tvTimer);
 		tvScore = (TextView) findViewById(R.id.tvScore);
 		list = (LinearLayout) findViewById(R.id.llAnswers);
@@ -111,9 +112,6 @@ public class MainActivity extends Activity
 						// @Override
 						public void onClick(View v)
 						{
-							String ans1 = game.getActualQuestion().getCorectAnswer();
-							String ans2 = String.valueOf(tt.getText());
-							
 							
 							if (game.getActualQuestion().getCorectAnswer().equals(tt.getText()))
 							{
@@ -154,21 +152,22 @@ public class MainActivity extends Activity
 		startActivity(i);
 	}
 
-	public void onClickAnswer(View view)
-	{
-		Button btn = (Button) view;
-		// Toast.makeText(App.getContext(), btn.getText(),
-		// Toast.LENGTH_SHORT).show();
-		if (game.getActualQuestion().getCorectAnswer().equals(btn.getText()))
-		{
-			correctAnswer();
-			timer.addTimeToCountDown(5000);
-
-		} else
-		{
-			wrongAnswer();
-		}
-	}
+// za brisanje
+//	public void onClickAnswer(View view)
+//	{
+//		Button btn = (Button) view;
+//		// Toast.makeText(App.getContext(), btn.getText(),
+//		// Toast.LENGTH_SHORT).show();
+//		if (game.getActualQuestion().getCorectAnswer().equals(btn.getText()))
+//		{
+//			correctAnswer();
+//			timer.addTimeToCountDown(5000);
+//
+//		} else
+//		{
+//			wrongAnswer();
+//		}
+//	}
 
 	private void correctAnswer()
 	{
@@ -222,7 +221,42 @@ public class MainActivity extends Activity
 	{
 		if (game.isHelpHalf())
 		{
+			int a = game.getAnswerPosition(game.getActualQuestion());
+			int oneMore = -1;
+			
+			List<Integer> ansi = new ArrayList<Integer>();
+			ansi.add(0);
+			ansi.add(1);
+			ansi.add(2);
+			ansi.add(3);
+			
+			ansi.remove(a);
 
+			boolean cool = false;
+			Random ran = new Random();
+			while (!cool)
+			{
+				
+				int x = ran.nextInt(4);
+				if (x != a)
+				{
+					oneMore = x;
+					cool = true;
+				}
+			}
+			
+			//Toast.makeText(App.getContext(), "Tacan odgovor je pod:" + a, Toast.LENGTH_SHORT).show();
+			ansi.remove(getPosInIntList(ansi, oneMore));
+			
+			
+			List<View> taci =  list.getTouchables();
+					
+			for (Integer integer : ansi)
+			{
+				View v = taci.get(integer);
+				list.removeView(v);
+			}
+			
 		}
 	}
 
@@ -235,5 +269,18 @@ public class MainActivity extends Activity
 			game.setHelpSkip(false);
 			endCheck();
 		}
+	}
+	
+	private int getPosInIntList(List<Integer> aList, int broj)
+	{
+		
+		for (int i = 0; i < aList.size(); i++)
+		{
+			if (aList.get(i).equals(broj))
+			{
+				return i;
+			}
+		}
+		return -1;
 	}
 }
