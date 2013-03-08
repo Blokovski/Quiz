@@ -1,12 +1,15 @@
 package com.outland.quiz;
 
 import com.outland.quiz.model.Game;
+import com.swarmconnect.SwarmActivity;
+import com.swarmconnect.SwarmLeaderboard;
+
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class EndGameActivity extends Activity
+public class EndGameActivity extends SwarmActivity
 {
 	TextView tvTrue;
 	TextView tvFalse;
@@ -31,5 +34,6 @@ public class EndGameActivity extends Activity
 		tvScore.setText(String.valueOf(game.getScore()));
 		tvTrue.setText(String.valueOf(game.getTrueAnswers()));
 		tvFalse.setText(String.valueOf(game.getFalseAnswers()));
+		SwarmLeaderboard.submitScoreAndShowLeaderboard(6897, game.getScore());
 	}
 }

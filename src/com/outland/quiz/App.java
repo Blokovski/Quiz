@@ -2,6 +2,7 @@ package com.outland.quiz;
 
 import com.outland.quiz.model.Game;
 
+
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
@@ -32,6 +33,7 @@ public class App extends Application
 	{
 
 		super.onCreate();
+		
 		String version = "100";
 		try
 		{

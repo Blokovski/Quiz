@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 import com.outland.quiz.model.Game;
 import com.outland.quiz.model.Question;
 import com.outland.quiz.model.Rules;
@@ -39,6 +41,9 @@ public class MainActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		 AdView adView = (AdView)this.findViewById(R.id.adView);
+		 adView.loadAd(new AdRequest());
 
 		tvQuestion = (TextView) findViewById(R.id.tvQuestion);
 		tvTimer = (TextView) findViewById(R.id.tvTimer);
