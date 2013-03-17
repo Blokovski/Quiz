@@ -4,26 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdView;
-import com.outland.quiz.model.Game;
-import com.outland.quiz.model.Question;
-import com.outland.quiz.model.Rules;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+import com.outland.quiz.model.Game;
+import com.outland.quiz.model.Question;
+import com.outland.quiz.model.Rules;
 
 public class MainActivity extends Activity
 {
@@ -75,22 +73,6 @@ public class MainActivity extends Activity
 		timer.start();
 
 	}
-
-//	private void setQuestion(Question q)
-//	{
-//		if (q != null)
-//		{
-//			tvQuestion.setText(q.getQuestion());
-//			List<String> ans = q.getAnswers();
-//			String answers = "";
-//			for (int i = 0; i < ans.size(); i++)
-//			{
-//				int brojac = i + 1;
-//				answers += brojac + ".: " + ans.get(i) + "\r\n";
-//				tvAnswers.setText(answers);
-//			}
-//		}
-//	}
 
 	private void setQuestion(Question q)
 	{
@@ -157,23 +139,6 @@ public class MainActivity extends Activity
 		startActivity(i);
 	}
 
-// za brisanje
-//	public void onClickAnswer(View view)
-//	{
-//		Button btn = (Button) view;
-//		// Toast.makeText(App.getContext(), btn.getText(),
-//		// Toast.LENGTH_SHORT).show();
-//		if (game.getActualQuestion().getCorectAnswer().equals(btn.getText()))
-//		{
-//			correctAnswer();
-//			timer.addTimeToCountDown(5000);
-//
-//		} else
-//		{
-//			wrongAnswer();
-//		}
-//	}
-
 	private void correctAnswer()
 	{
 		Toast.makeText(App.getContext(), "Tacan odgovor", Toast.LENGTH_SHORT).show();
@@ -199,12 +164,6 @@ public class MainActivity extends Activity
 
 	private void wrongAnswer()
 	{
-		// Toast.makeText(App.getContext(), "Hajde ponovo",
-		// Toast.LENGTH_SHORT).show();
-		// game.setQuestionPosition(true);
-		// game.incNumberOfAnsweredQuestion();
-		// game.incFalseAnswers();
-		// endCheck();
 		gameOver();
 	}
 
@@ -215,16 +174,17 @@ public class MainActivity extends Activity
 
 	public void onClickHelpAddTime(View view)
 	{
-		if (game.isHelpMoreTime())
+		if (game.getHelpMoreTime() > 0)
 		{
 			timer.addTimeToCountDown(Rules.ADDITIONAL_TIME_ADD);
-			game.setHelpMoreTime(false);
+			game.usingHelpMoreTime();
+			game.removeScore(Rules.ADDITIONAL_TIME_POINTS_PENALTY);
 		}
 	}
 
 	public void onClickHelpHalf(View view)
 	{
-		if (game.isHelpHalf())
+		if (game.getHelpHalf() > 0)
 		{
 			int a = game.getAnswerPosition(game.getActualQuestion());
 			int oneMore = -1;
@@ -263,15 +223,16 @@ public class MainActivity extends Activity
 			}
 			
 		}
+		game.usingHelpHalf();
 	}
 
 	public void onClickHelpSkip(View view)
 	{
-		if (game.isHelpSkip())
+		if (game.getHelpSkip()>0)
 		{
 			game.setQuestionPosition(true);
 			game.incNumberOfAnsweredQuestion();
-			game.setHelpSkip(false);
+			game.usingHelpSkip();
 			endCheck();
 		}
 	}

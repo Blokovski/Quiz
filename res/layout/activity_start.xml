@@ -28,7 +28,7 @@
             android:id="@+id/settingsBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:onClick="onClickSettings"
             android:background="@drawable/button_selector"
             android:paddingBottom="5dip"
             android:paddingTop="5dip"

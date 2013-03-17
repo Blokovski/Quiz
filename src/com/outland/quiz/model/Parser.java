@@ -25,7 +25,7 @@ public class Parser
 				currentQuestion.setId(jsonObject.optInt("id"));
 				currentQuestion.setQuestion(jsonObject.optString("question"));
 				currentQuestion.setCorectAnswer(jsonObject.optString("corectAnswer"));
-				//currentQuestion.setCategory(jsonObject.optInt("category"));
+				currentQuestion.setDifficulty(jsonObject.optInt("diff",1));
 				
 				JSONArray arrAnswers = jsonObject.getJSONArray("answer");
 				final List<String> answers = new ArrayList<String>();

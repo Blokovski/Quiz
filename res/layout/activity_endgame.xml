@@ -15,7 +15,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:paddingLeft="10dp"
             android:text="SCORE:" />
 
@@ -40,7 +39,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:paddingLeft="10dp"
             android:text="True Answers:" />
 
@@ -52,27 +50,16 @@
             android:text="0" />
     </LinearLayout>
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/linearLayout2"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:paddingLeft="10dp"
-            android:text="False Answers:" />
-
-        <TextView
-            android:id="@+id/tvEndFalseAnswers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="0" />
-    </LinearLayout>
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_selector"
+        android:onClick="onClickSubmit"
+        android:padding="10dp"
+        android:text="Submit your score"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

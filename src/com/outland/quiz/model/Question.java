@@ -10,6 +10,7 @@ public class Question
 	private List<String> answers = new ArrayList<String>();
 	private String corectAnswer;
 	private int category;
+	private int difficulty;
 	
 	public int getId()
 	{
@@ -50,5 +51,13 @@ public class Question
 	public void setAnswers(List<String> answers)
 	{
 		this.answers = answers;
+	}
+	public int getDifficulty()
+	{
+		return difficulty;
+	}
+	public void setDifficulty(int difficulty)
+	{
+		this.difficulty = difficulty;
 	}
 }
