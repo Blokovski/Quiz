@@ -35,6 +35,8 @@ public class Game
 
 	List<Question> questions = new ArrayList<Question>();
 	String json;
+	
+	boolean sound;
 
 	public Game()
 	{
@@ -84,7 +86,8 @@ public class Game
 	private void setGameSettings()
 	{
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(App.getContext());
-		difficulty = sharedPref.getInt("listdiff" , 1);
+		difficulty = sharedPref.getInt("listdiff", 1);
+		sound = sharedPref.getBoolean("sound_effect", true);
 	}
 
 	public int getAnswerPosition(Question q)
@@ -126,25 +129,26 @@ public class Game
 	public int addScore()
 	{
 		int diff = getActualQuestion().getDifficulty();
+		int points = 0;
 		switch (diff)
 		{
 		case 1:
-			score += Rules.EASY_POINTS;
+			points= Rules.EASY_POINTS;
 			break;
 
 		case 2:
-			score += Rules.MEDIUM_POINTS;
+			points= Rules.MEDIUM_POINTS;
 			break;
 
 		case 3:
-			score += Rules.HARD_POINTS;
+			points = Rules.HARD_POINTS;
 			break;
 
 		default:
 			break;
 		}
-		score += Rules.MEDIUM_POINTS;
-		return score;
+		score += points;
+		return points;
 	}
 	
 	public int removeScore(int points)
@@ -300,6 +304,11 @@ public class Game
 	public void usingHelpSkip()
 	{
 		this.helpSkip--;
+	}
+
+	public boolean isSound()
+	{
+		return sound;
 	}
 
 	

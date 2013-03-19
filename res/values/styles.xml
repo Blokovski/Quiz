@@ -17,4 +17,18 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="ScoreTextGreen" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/green_light</item>
+        <item name="android:textStyle">bold|italic</item>
+       
+    </style>
+    
+    <style name="ScoreTextRed" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textStyle">bold|italic</item>
+       
+    </style>
+
 </resources>

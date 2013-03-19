@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" > 
- <PreferenceCategory
-   android:summary="Game Difficulty"
-   android:title="Settings" >
- 
- 
-  <ListPreference
-     android:entries="@array/listOptions"
-     android:entryValues="@array/listValues"
-     android:key="listdiff"
-     android:summary="Select you game difficulty"
-     android:title="Game Difficulty" />
- </PreferenceCategory>
-</PreferenceScreen> 
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:summary="Game Difficulty"
+        android:title="Settings" >
+        <ListPreference
+            android:entries="@array/listOptions"
+            android:entryValues="@array/listValues"
+            android:key="listdiff"
+            android:summary="Select you game difficulty"
+            android:title="Game Difficulty"
+            android:defaultValue="1" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Sound" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="sound_effect"
+            android:title="Sound On/Off" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

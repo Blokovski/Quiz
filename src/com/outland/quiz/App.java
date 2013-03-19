@@ -8,8 +8,7 @@ import com.outland.quiz.model.Game;
 
 public class App extends Application
 {
-	
-	
+
 	private static Context mContext;
 	private static Game game;
 
