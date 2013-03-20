@@ -8,35 +8,32 @@
 package com.outland.quiz;
 
 public final class R {
-    public static final class anim {
-        public static final int anim_score=0x7f040000;
-    }
     public static final class array {
-        public static final int listOptions=0x7f0a0000;
-        public static final int listValues=0x7f0a0001;
+        public static final int listOptions=0x7f090000;
+        public static final int listValues=0x7f090001;
     }
     public static final class attr {
     }
     public static final class color {
-        public static final int black=0x7f070005;
-        public static final int black_transparent=0x7f070006;
-        public static final int blue_android=0x7f07000e;
-        public static final int blue_fashion=0x7f07000f;
-        public static final int brown=0x7f07000b;
-        public static final int error_text=0x7f070000;
-        public static final int green_light=0x7f07000a;
-        public static final int grey=0x7f070008;
-        public static final int grey_dark=0x7f070012;
-        public static final int grey_fashion=0x7f070011;
-        public static final int opaque_red=0x7f070002;
-        public static final int pink=0x7f07000d;
-        public static final int pink_fashion=0x7f070010;
-        public static final int popup_background=0x7f070001;
-        public static final int red=0x7f070007;
-        public static final int silver=0x7f070009;
-        public static final int translucent_red=0x7f070003;
-        public static final int white=0x7f070004;
-        public static final int yellow=0x7f07000c;
+        public static final int black=0x7f060005;
+        public static final int black_transparent=0x7f060006;
+        public static final int blue_android=0x7f06000e;
+        public static final int blue_fashion=0x7f06000f;
+        public static final int brown=0x7f06000b;
+        public static final int error_text=0x7f060000;
+        public static final int green_light=0x7f06000a;
+        public static final int grey=0x7f060008;
+        public static final int grey_dark=0x7f060012;
+        public static final int grey_fashion=0x7f060011;
+        public static final int opaque_red=0x7f060002;
+        public static final int pink=0x7f06000d;
+        public static final int pink_fashion=0x7f060010;
+        public static final int popup_background=0x7f060001;
+        public static final int red=0x7f060007;
+        public static final int silver=0x7f060009;
+        public static final int translucent_red=0x7f060003;
+        public static final int white=0x7f060004;
+        public static final int yellow=0x7f06000c;
     }
     public static final class drawable {
         public static final int black_button=0x7f020000;
@@ -116,125 +113,125 @@ public final class R {
         public static final int swarm_x=0x7f02004a;
     }
     public static final class id {
-        public static final int accept=0x7f0c0038;
-        public static final int achievement_icon=0x7f0c0016;
-        public static final int adView=0x7f0c0007;
-        public static final int ad_layout_blank=0x7f0c0006;
-        public static final int add=0x7f0c0033;
-        public static final int add_friend_username=0x7f0c0032;
-        public static final int benefits=0x7f0c0024;
-        public static final int btnAddTimeHelp=0x7f0c000e;
-        public static final int btnHalfHelp=0x7f0c000f;
-        public static final int btnSkipHelp=0x7f0c0010;
-        public static final int btnSubmit=0x7f0c0004;
-        public static final int cancel=0x7f0c002e;
-        public static final int change_pass=0x7f0c0069;
-        public static final int close=0x7f0c0040;
-        public static final int coins=0x7f0c0050;
-        public static final int coins_icon=0x7f0c005f;
-        public static final int confirm=0x7f0c0074;
-        public static final int confirm_error=0x7f0c0073;
-        public static final int confirm_password=0x7f0c0066;
-        public static final int create=0x7f0c0023;
-        public static final int current_password=0x7f0c0064;
-        public static final int date=0x7f0c0072;
-        public static final int deny=0x7f0c0039;
-        public static final int desc=0x7f0c002b;
-        public static final int description=0x7f0c0019;
-        public static final int download=0x7f0c002d;
-        public static final int email=0x7f0c0022;
-        public static final int email_error=0x7f0c0021;
-        public static final int empty_list=0x7f0c002f;
-        public static final int exitBtn=0x7f0c0014;
-        public static final int extra=0x7f0c0027;
-        public static final int facebook_login=0x7f0c0057;
-        public static final int footer=0x7f0c0031;
-        public static final int friended_section=0x7f0c0036;
-        public static final int get_coins=0x7f0c006c;
-        public static final int google_login=0x7f0c0059;
-        public static final int guest=0x7f0c005c;
-        public static final int header=0x7f0c003d;
-        public static final int home=0x7f0c003f;
-        public static final int icon=0x7f0c0026;
-        public static final int image=0x7f0c002a;
-        public static final int linearLayout1=0x7f0c0000;
-        public static final int linearLayout2=0x7f0c0002;
-        public static final int linearLayout3=0x7f0c000a;
-        public static final int linearLayoutHelps=0x7f0c000d;
-        public static final int list=0x7f0c0030;
-        public static final int llAnswers=0x7f0c0009;
-        public static final int login=0x7f0c005b;
-        public static final int logo=0x7f0c003e;
-        public static final int logout=0x7f0c006b;
-        public static final int lost_password=0x7f0c005a;
-        public static final int mail=0x7f0c004f;
-        public static final int main_draw=0x7f0c0005;
-        public static final int menu_settings=0x7f0c0076;
-        public static final int message=0x7f0c004e;
-        public static final int more=0x7f0c0053;
-        public static final int name=0x7f0c001b;
-        public static final int new_password=0x7f0c0065;
-        public static final int notifications=0x7f0c006a;
-        public static final int num_items=0x7f0c006e;
-        public static final int offline_error=0x7f0c004a;
-        public static final int offline_error_underline=0x7f0c004b;
-        public static final int online_text=0x7f0c0035;
-        public static final int password=0x7f0c0020;
-        public static final int password_box=0x7f0c0068;
-        public static final int password_error=0x7f0c001f;
-        public static final int paypal=0x7f0c003b;
-        public static final int pic=0x7f0c001a;
-        public static final int playBtn=0x7f0c0011;
-        public static final int points=0x7f0c0017;
-        public static final int popup_bottom_half=0x7f0c002c;
-        public static final int popup_header=0x7f0c0028;
-        public static final int popup_top_half=0x7f0c0029;
-        public static final int price=0x7f0c006d;
-        public static final int profile_pic=0x7f0c0034;
-        public static final int progressbar=0x7f0c0054;
-        public static final int publisher=0x7f0c001c;
-        public static final int purchase=0x7f0c0060;
-        public static final int rank=0x7f0c0051;
-        public static final int recommended_app_holder=0x7f0c004c;
-        public static final int recommended_app_holder_underline=0x7f0c004d;
-        public static final int reply=0x7f0c006f;
-        public static final int score=0x7f0c0052;
-        public static final int scoreBtn=0x7f0c0013;
-        public static final int send=0x7f0c0070;
-        public static final int set_pass=0x7f0c0067;
-        public static final int set_password_box=0x7f0c0063;
-        public static final int settingsBtn=0x7f0c0012;
-        public static final int sheader=0x7f0c0041;
-        public static final int sheader_btn1=0x7f0c0044;
-        public static final int sheader_btn1_dropdown=0x7f0c0046;
-        public static final int sheader_btn1_text=0x7f0c0045;
-        public static final int sheader_btn2=0x7f0c0047;
-        public static final int sheader_btn2_dropdown=0x7f0c0049;
-        public static final int sheader_btn2_text=0x7f0c0048;
-        public static final int sheader_icon=0x7f0c0042;
-        public static final int sheader_title=0x7f0c0043;
-        public static final int speech_bubble=0x7f0c0071;
-        public static final int submit=0x7f0c005d;
-        public static final int success=0x7f0c005e;
-        public static final int swarm_login=0x7f0c0055;
-        public static final int tapjoy=0x7f0c003a;
-        public static final int terms=0x7f0c0025;
-        public static final int title=0x7f0c0018;
-        public static final int triangle=0x7f0c0056;
-        public static final int tvAnswerRow=0x7f0c0015;
-        public static final int tvEndScore=0x7f0c0001;
-        public static final int tvEndTrueAnswers=0x7f0c0003;
-        public static final int tvQuestion=0x7f0c0008;
-        public static final int tvScore=0x7f0c000b;
-        public static final int tvTimer=0x7f0c000c;
-        public static final int twitter_login=0x7f0c0058;
-        public static final int unfriended_section=0x7f0c0037;
-        public static final int upgrade=0x7f0c0062;
-        public static final int upgrade_box=0x7f0c0061;
-        public static final int username=0x7f0c001e;
-        public static final int username_error=0x7f0c001d;
-        public static final int wallet=0x7f0c003c;
-        public static final int webview=0x7f0c0075;
+        public static final int accept=0x7f0b0038;
+        public static final int achievement_icon=0x7f0b0016;
+        public static final int adView=0x7f0b0007;
+        public static final int ad_layout_blank=0x7f0b0006;
+        public static final int add=0x7f0b0033;
+        public static final int add_friend_username=0x7f0b0032;
+        public static final int benefits=0x7f0b0024;
+        public static final int btnAddTimeHelp=0x7f0b000e;
+        public static final int btnHalfHelp=0x7f0b000f;
+        public static final int btnSkipHelp=0x7f0b0010;
+        public static final int btnSubmit=0x7f0b0004;
+        public static final int cancel=0x7f0b002e;
+        public static final int change_pass=0x7f0b0069;
+        public static final int close=0x7f0b0040;
+        public static final int coins=0x7f0b0050;
+        public static final int coins_icon=0x7f0b005f;
+        public static final int confirm=0x7f0b0074;
+        public static final int confirm_error=0x7f0b0073;
+        public static final int confirm_password=0x7f0b0066;
+        public static final int create=0x7f0b0023;
+        public static final int current_password=0x7f0b0064;
+        public static final int date=0x7f0b0072;
+        public static final int deny=0x7f0b0039;
+        public static final int desc=0x7f0b002b;
+        public static final int description=0x7f0b0019;
+        public static final int download=0x7f0b002d;
+        public static final int email=0x7f0b0022;
+        public static final int email_error=0x7f0b0021;
+        public static final int empty_list=0x7f0b002f;
+        public static final int exitBtn=0x7f0b0014;
+        public static final int extra=0x7f0b0027;
+        public static final int facebook_login=0x7f0b0057;
+        public static final int footer=0x7f0b0031;
+        public static final int friended_section=0x7f0b0036;
+        public static final int get_coins=0x7f0b006c;
+        public static final int google_login=0x7f0b0059;
+        public static final int guest=0x7f0b005c;
+        public static final int header=0x7f0b003d;
+        public static final int home=0x7f0b003f;
+        public static final int icon=0x7f0b0026;
+        public static final int image=0x7f0b002a;
+        public static final int linearLayout1=0x7f0b0000;
+        public static final int linearLayout2=0x7f0b0002;
+        public static final int linearLayout3=0x7f0b000a;
+        public static final int linearLayoutHelps=0x7f0b000d;
+        public static final int list=0x7f0b0030;
+        public static final int llAnswers=0x7f0b0009;
+        public static final int login=0x7f0b005b;
+        public static final int logo=0x7f0b003e;
+        public static final int logout=0x7f0b006b;
+        public static final int lost_password=0x7f0b005a;
+        public static final int mail=0x7f0b004f;
+        public static final int main_draw=0x7f0b0005;
+        public static final int menu_settings=0x7f0b0076;
+        public static final int message=0x7f0b004e;
+        public static final int more=0x7f0b0053;
+        public static final int name=0x7f0b001b;
+        public static final int new_password=0x7f0b0065;
+        public static final int notifications=0x7f0b006a;
+        public static final int num_items=0x7f0b006e;
+        public static final int offline_error=0x7f0b004a;
+        public static final int offline_error_underline=0x7f0b004b;
+        public static final int online_text=0x7f0b0035;
+        public static final int password=0x7f0b0020;
+        public static final int password_box=0x7f0b0068;
+        public static final int password_error=0x7f0b001f;
+        public static final int paypal=0x7f0b003b;
+        public static final int pic=0x7f0b001a;
+        public static final int playBtn=0x7f0b0011;
+        public static final int points=0x7f0b0017;
+        public static final int popup_bottom_half=0x7f0b002c;
+        public static final int popup_header=0x7f0b0028;
+        public static final int popup_top_half=0x7f0b0029;
+        public static final int price=0x7f0b006d;
+        public static final int profile_pic=0x7f0b0034;
+        public static final int progressbar=0x7f0b0054;
+        public static final int publisher=0x7f0b001c;
+        public static final int purchase=0x7f0b0060;
+        public static final int rank=0x7f0b0051;
+        public static final int recommended_app_holder=0x7f0b004c;
+        public static final int recommended_app_holder_underline=0x7f0b004d;
+        public static final int reply=0x7f0b006f;
+        public static final int score=0x7f0b0052;
+        public static final int scoreBtn=0x7f0b0013;
+        public static final int send=0x7f0b0070;
+        public static final int set_pass=0x7f0b0067;
+        public static final int set_password_box=0x7f0b0063;
+        public static final int settingsBtn=0x7f0b0012;
+        public static final int sheader=0x7f0b0041;
+        public static final int sheader_btn1=0x7f0b0044;
+        public static final int sheader_btn1_dropdown=0x7f0b0046;
+        public static final int sheader_btn1_text=0x7f0b0045;
+        public static final int sheader_btn2=0x7f0b0047;
+        public static final int sheader_btn2_dropdown=0x7f0b0049;
+        public static final int sheader_btn2_text=0x7f0b0048;
+        public static final int sheader_icon=0x7f0b0042;
+        public static final int sheader_title=0x7f0b0043;
+        public static final int speech_bubble=0x7f0b0071;
+        public static final int submit=0x7f0b005d;
+        public static final int success=0x7f0b005e;
+        public static final int swarm_login=0x7f0b0055;
+        public static final int tapjoy=0x7f0b003a;
+        public static final int terms=0x7f0b0025;
+        public static final int title=0x7f0b0018;
+        public static final int triangle=0x7f0b0056;
+        public static final int tvAnswerRow=0x7f0b0015;
+        public static final int tvEndScore=0x7f0b0001;
+        public static final int tvEndTrueAnswers=0x7f0b0003;
+        public static final int tvQuestion=0x7f0b0008;
+        public static final int tvScore=0x7f0b000b;
+        public static final int tvTimer=0x7f0b000c;
+        public static final int twitter_login=0x7f0b0058;
+        public static final int unfriended_section=0x7f0b0037;
+        public static final int upgrade=0x7f0b0062;
+        public static final int upgrade_box=0x7f0b0061;
+        public static final int username=0x7f0b001e;
+        public static final int username_error=0x7f0b001d;
+        public static final int wallet=0x7f0b003c;
+        public static final int webview=0x7f0b0075;
     }
     public static final class layout {
         public static final int activity_endgame=0x7f030000;
@@ -276,190 +273,190 @@ public final class R {
         public static final int swarm_webview=0x7f030024;
     }
     public static final class menu {
-        public static final int activity_main=0x7f0b0000;
+        public static final int activity_main=0x7f0a0000;
     }
     public static final class raw {
-        public static final int generated=0x7f060000;
-        public static final int generated_ok=0x7f060001;
-        public static final int ok=0x7f060002;
-        public static final int used=0x7f060003;
-        public static final int wrong=0x7f060004;
+        public static final int generated=0x7f050000;
+        public static final int generated_ok=0x7f050001;
+        public static final int ok=0x7f050002;
+        public static final int used=0x7f050003;
+        public static final int wrong=0x7f050004;
     }
     public static final class string {
-        public static final int acc_achievements=0x7f080042;
-        public static final int acc_achievements_details=0x7f080043;
-        public static final int acc_chat=0x7f080044;
-        public static final int acc_chat_details=0x7f080045;
-        public static final int acc_claim=0x7f080047;
-        public static final int acc_friends=0x7f080040;
-        public static final int acc_friends_details=0x7f080041;
-        public static final int acc_guest=0x7f080046;
-        public static final int acc_last_things=0x7f08003f;
-        public static final int acc_select_username=0x7f08003e;
+        public static final int acc_achievements=0x7f070042;
+        public static final int acc_achievements_details=0x7f070043;
+        public static final int acc_chat=0x7f070044;
+        public static final int acc_chat_details=0x7f070045;
+        public static final int acc_claim=0x7f070047;
+        public static final int acc_friends=0x7f070040;
+        public static final int acc_friends_details=0x7f070041;
+        public static final int acc_guest=0x7f070046;
+        public static final int acc_last_things=0x7f07003f;
+        public static final int acc_select_username=0x7f07003e;
         /**  Account 
          */
-        public static final int acc_username=0x7f08003d;
-        public static final int accepted_friend_request=0x7f080009;
-        public static final int account_creation_failed=0x7f08001b;
-        public static final int achievement_unlocked=0x7f080008;
-        public static final int achievements=0x7f080034;
-        public static final int all_fields_required=0x7f08002e;
-        public static final int app_name=0x7f080086;
-        public static final int cancel=0x7f080028;
-        public static final int coi_paypal=0x7f080052;
-        public static final int coi_paypal_details=0x7f080053;
-        public static final int coi_purchase_with_paypal=0x7f080057;
-        public static final int coi_purchase_with_wallet=0x7f080058;
-        public static final int coi_select_coin_provider=0x7f080056;
+        public static final int acc_username=0x7f07003d;
+        public static final int accepted_friend_request=0x7f070009;
+        public static final int account_creation_failed=0x7f07001b;
+        public static final int achievement_unlocked=0x7f070008;
+        public static final int achievements=0x7f070034;
+        public static final int all_fields_required=0x7f07002e;
+        public static final int app_name=0x7f070086;
+        public static final int cancel=0x7f070028;
+        public static final int coi_paypal=0x7f070052;
+        public static final int coi_paypal_details=0x7f070053;
+        public static final int coi_purchase_with_paypal=0x7f070057;
+        public static final int coi_purchase_with_wallet=0x7f070058;
+        public static final int coi_select_coin_provider=0x7f070056;
         /**  Coins 
          */
-        public static final int coi_tapjoy=0x7f080050;
-        public static final int coi_tapjoy_details=0x7f080051;
-        public static final int coi_thanks=0x7f080059;
-        public static final int coi_wallet=0x7f080054;
-        public static final int coi_wallet_details=0x7f080055;
-        public static final int coins_added_to_account=0x7f08000c;
-        public static final int confirm_pass=0x7f080007;
-        public static final int create_account=0x7f080005;
-        public static final int email=0x7f080004;
-        public static final int enter_valid_email=0x7f080029;
-        public static final int enter_your_email=0x7f08002a;
-        public static final int error_adding_friend=0x7f08001d;
-        public static final int error_saving_new_pass=0x7f08002c;
-        public static final int facebook_error=0x7f080014;
-        public static final int fri_add_a_friend=0x7f080049;
+        public static final int coi_tapjoy=0x7f070050;
+        public static final int coi_tapjoy_details=0x7f070051;
+        public static final int coi_thanks=0x7f070059;
+        public static final int coi_wallet=0x7f070054;
+        public static final int coi_wallet_details=0x7f070055;
+        public static final int coins_added_to_account=0x7f07000c;
+        public static final int confirm_pass=0x7f070007;
+        public static final int create_account=0x7f070005;
+        public static final int email=0x7f070004;
+        public static final int enter_valid_email=0x7f070029;
+        public static final int enter_your_email=0x7f07002a;
+        public static final int error_adding_friend=0x7f07001d;
+        public static final int error_saving_new_pass=0x7f07002c;
+        public static final int facebook_error=0x7f070014;
+        public static final int fri_add_a_friend=0x7f070049;
         /**  Friends 
          */
-        public static final int fri_get_friends=0x7f080048;
-        public static final int friend_confirmed=0x7f080021;
-        public static final int friend_removed=0x7f080020;
-        public static final int friend_request_sent=0x7f08001c;
-        public static final int friends=0x7f08001f;
-        public static final int get_more_games=0x7f080038;
-        public static final int hea_down_tri=0x7f08005b;
+        public static final int fri_get_friends=0x7f070048;
+        public static final int friend_confirmed=0x7f070021;
+        public static final int friend_removed=0x7f070020;
+        public static final int friend_request_sent=0x7f07001c;
+        public static final int friends=0x7f07001f;
+        public static final int get_more_games=0x7f070038;
+        public static final int hea_down_tri=0x7f07005b;
         /**  Header 
          */
-        public static final int hea_my_scores=0x7f08005a;
-        public static final int hea_offline=0x7f08005d;
-        public static final int hea_today=0x7f08005c;
-        public static final int hello_world=0x7f080087;
-        public static final int inb_conversation_with_username=0x7f08004f;
-        public static final int inb_delete=0x7f08004d;
-        public static final int inb_delete_messages=0x7f08004c;
-        public static final int inb_delete_thread=0x7f08004b;
+        public static final int hea_my_scores=0x7f07005a;
+        public static final int hea_offline=0x7f07005d;
+        public static final int hea_today=0x7f07005c;
+        public static final int hello_world=0x7f070087;
+        public static final int inb_conversation_with_username=0x7f07004f;
+        public static final int inb_delete=0x7f07004d;
+        public static final int inb_delete_messages=0x7f07004c;
+        public static final int inb_delete_thread=0x7f07004b;
         /**   Inbox 
          */
-        public static final int inb_get_messages=0x7f08004a;
-        public static final int inb_unable_to_send_message=0x7f08004e;
+        public static final int inb_get_messages=0x7f07004a;
+        public static final int inb_unable_to_send_message=0x7f07004e;
         /**  Inventory 
          */
-        public static final int inv_coins=0x7f08005e;
-        public static final int item_purchased=0x7f080013;
-        public static final int lea_friends_scores=0x7f080084;
+        public static final int inv_coins=0x7f07005e;
+        public static final int item_purchased=0x7f070013;
+        public static final int lea_friends_scores=0x7f070084;
         /**  Leaderboards 
          */
-        public static final int lea_my_scores=0x7f080083;
-        public static final int lea_top_scores=0x7f080085;
-        public static final int leaderboard=0x7f080036;
-        public static final int leaderboards=0x7f080037;
+        public static final int lea_my_scores=0x7f070083;
+        public static final int lea_top_scores=0x7f070085;
+        public static final int leaderboard=0x7f070036;
+        public static final int leaderboards=0x7f070037;
         /**  Load More 
          */
-        public static final int loa_load_next_25=0x7f08005f;
-        public static final int loading=0x7f080033;
+        public static final int loa_load_next_25=0x7f07005f;
+        public static final int loading=0x7f070033;
         /**  trailing space is intentional 
          */
-        public static final int log_create_account=0x7f080063;
-        public static final int log_lost_pass=0x7f080062;
+        public static final int log_create_account=0x7f070063;
+        public static final int log_lost_pass=0x7f070062;
         /**  Login 
          */
-        public static final int log_select_account=0x7f080060;
-        public static final int log_username_or_email=0x7f080061;
-        public static final int logging_in=0x7f080032;
-        public static final int login=0x7f080002;
+        public static final int log_select_account=0x7f070060;
+        public static final int log_username_or_email=0x7f070061;
+        public static final int logging_in=0x7f070032;
+        public static final int login=0x7f070002;
         /**  Lost Password 
          */
-        public static final int los_instructions=0x7f080064;
-        public static final int los_reset_pass=0x7f080065;
-        public static final int los_sent_pass=0x7f080066;
-        public static final int menu_settings=0x7f080088;
-        public static final int message_from_username=0x7f08000f;
-        public static final int messages=0x7f080039;
-        public static final int num_friend_requests=0x7f080019;
-        public static final int num_new_messages=0x7f080016;
-        public static final int offers_by_tapjoy=0x7f08003b;
-        public static final int offline=0x7f080024;
-        public static final int offline_guest=0x7f08003c;
-        public static final int okay=0x7f08003a;
-        public static final int one_friend_request=0x7f080018;
+        public static final int los_instructions=0x7f070064;
+        public static final int los_reset_pass=0x7f070065;
+        public static final int los_sent_pass=0x7f070066;
+        public static final int menu_settings=0x7f070088;
+        public static final int message_from_username=0x7f07000f;
+        public static final int messages=0x7f070039;
+        public static final int num_friend_requests=0x7f070019;
+        public static final int num_new_messages=0x7f070016;
+        public static final int offers_by_tapjoy=0x7f07003b;
+        public static final int offline=0x7f070024;
+        public static final int offline_guest=0x7f07003c;
+        public static final int okay=0x7f07003a;
+        public static final int one_friend_request=0x7f070018;
         /**  trailing space is intentional 
          */
-        public static final int one_new_message=0x7f080015;
-        public static final int online_playing_app_name=0x7f080023;
-        public static final int password=0x7f080003;
-        public static final int password_changed=0x7f08002b;
-        public static final int passwords_do_not_match=0x7f08002d;
-        public static final int playing_app_name=0x7f080012;
+        public static final int one_new_message=0x7f070015;
+        public static final int online_playing_app_name=0x7f070023;
+        public static final int password=0x7f070003;
+        public static final int password_changed=0x7f07002b;
+        public static final int passwords_do_not_match=0x7f07002d;
+        public static final int playing_app_name=0x7f070012;
         /**  Purchase Popup 
          */
-        public static final int pur_cost=0x7f080067;
-        public static final int pur_download=0x7f080069;
-        public static final int pur_get_coins=0x7f08006d;
-        public static final int pur_need_more_coins=0x7f08006c;
-        public static final int pur_no_thanks=0x7f08006b;
+        public static final int pur_cost=0x7f070067;
+        public static final int pur_download=0x7f070069;
+        public static final int pur_get_coins=0x7f07006d;
+        public static final int pur_need_more_coins=0x7f07006c;
+        public static final int pur_no_thanks=0x7f07006b;
         /**  trailing space is intentional 
          */
-        public static final int pur_purchase=0x7f080068;
-        public static final int pur_purchase_for_price_coins=0x7f08006e;
-        public static final int pur_purchasing_title=0x7f08006f;
-        public static final int pur_recommended_for_you=0x7f08006a;
-        public static final int remove=0x7f080027;
-        public static final int remove_friend=0x7f080025;
-        public static final int request_failed=0x7f080022;
-        public static final int score_submitted=0x7f08000d;
-        public static final int set_change_pass=0x7f080075;
-        public static final int set_change_pass_details=0x7f080076;
-        public static final int set_confirm_pass=0x7f080074;
-        public static final int set_current_pass=0x7f080072;
-        public static final int set_logout=0x7f080079;
-        public static final int set_new_pass=0x7f080073;
-        public static final int set_push_details=0x7f080077;
-        public static final int set_push_enabled=0x7f080078;
-        public static final int set_select_username=0x7f080071;
+        public static final int pur_purchase=0x7f070068;
+        public static final int pur_purchase_for_price_coins=0x7f07006e;
+        public static final int pur_purchasing_title=0x7f07006f;
+        public static final int pur_recommended_for_you=0x7f07006a;
+        public static final int remove=0x7f070027;
+        public static final int remove_friend=0x7f070025;
+        public static final int request_failed=0x7f070022;
+        public static final int score_submitted=0x7f07000d;
+        public static final int set_change_pass=0x7f070075;
+        public static final int set_change_pass_details=0x7f070076;
+        public static final int set_confirm_pass=0x7f070074;
+        public static final int set_current_pass=0x7f070072;
+        public static final int set_logout=0x7f070079;
+        public static final int set_new_pass=0x7f070073;
+        public static final int set_push_details=0x7f070077;
+        public static final int set_push_enabled=0x7f070078;
+        public static final int set_select_username=0x7f070071;
         /**  Settings 
          */
-        public static final int set_username_benefits=0x7f080070;
-        public static final int settings=0x7f08002f;
-        public static final int sto_already_purchased=0x7f080081;
-        public static final int sto_failed_other=0x7f08007f;
+        public static final int set_username_benefits=0x7f070070;
+        public static final int settings=0x7f07002f;
+        public static final int sto_already_purchased=0x7f070081;
+        public static final int sto_failed_other=0x7f07007f;
         /**  Store 
          */
-        public static final int sto_get_coins=0x7f08007a;
-        public static final int sto_invalid_item=0x7f08007e;
-        public static final int sto_invalid_store=0x7f08007d;
-        public static final int sto_no_coins=0x7f08007c;
-        public static final int sto_no_internet=0x7f080080;
-        public static final int sto_num_items=0x7f080082;
-        public static final int sto_purchase_canceled=0x7f08007b;
-        public static final int store=0x7f080035;
-        public static final int terms=0x7f080001;
-        public static final int use_existing_account=0x7f080006;
-        public static final int user_came_online=0x7f080010;
-        public static final int user_not_found=0x7f08001e;
+        public static final int sto_get_coins=0x7f07007a;
+        public static final int sto_invalid_item=0x7f07007e;
+        public static final int sto_invalid_store=0x7f07007d;
+        public static final int sto_no_coins=0x7f07007c;
+        public static final int sto_no_internet=0x7f070080;
+        public static final int sto_num_items=0x7f070082;
+        public static final int sto_purchase_canceled=0x7f07007b;
+        public static final int store=0x7f070035;
+        public static final int terms=0x7f070001;
+        public static final int use_existing_account=0x7f070006;
+        public static final int user_came_online=0x7f070010;
+        public static final int user_not_found=0x7f07001e;
         /**  General and/or used on multiple screen 
          */
-        public static final int username=0x7f080000;
-        public static final int username_required=0x7f08001a;
-        public static final int want_to_remove_username_from_friends_list=0x7f080026;
-        public static final int wants_to_be_friend=0x7f08000a;
-        public static final int went_offline=0x7f080011;
-        public static final int x_of_y_completed=0x7f080017;
-        public static final int you_are_ranked_num=0x7f08000e;
-        public static final int you_earned_coins=0x7f08000b;
-        public static final int your_score_int=0x7f080030;
-        public static final int your_score_string=0x7f080031;
+        public static final int username=0x7f070000;
+        public static final int username_required=0x7f07001a;
+        public static final int want_to_remove_username_from_friends_list=0x7f070026;
+        public static final int wants_to_be_friend=0x7f07000a;
+        public static final int went_offline=0x7f070011;
+        public static final int x_of_y_completed=0x7f070017;
+        public static final int you_are_ranked_num=0x7f07000e;
+        public static final int you_earned_coins=0x7f07000b;
+        public static final int your_score_int=0x7f070030;
+        public static final int your_score_string=0x7f070031;
     }
     public static final class style {
-        public static final int ActivityDialog=0x7f09000c;
+        public static final int ActivityDialog=0x7f08000c;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -481,27 +478,27 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f09000d;
+        public static final int AppBaseTheme=0x7f08000d;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f09000e;
-        public static final int BlackShadow=0x7f090004;
-        public static final int BlackShadow_WhiteText=0x7f09000b;
-        public static final int DarkText=0x7f090000;
-        public static final int GreyText=0x7f090001;
-        public static final int LightGreyText=0x7f090002;
-        public static final int LightShadow=0x7f090005;
-        public static final int LightShadow_BlackText=0x7f090008;
-        public static final int LightShadow_DarkText=0x7f090007;
-        public static final int LightShadow_GreyText=0x7f09000a;
-        public static final int ScoreTextGreen=0x7f09000f;
-        public static final int ScoreTextRed=0x7f090010;
-        public static final int WhiteShadow=0x7f090006;
-        public static final int WhiteShadow_DarkText=0x7f090009;
-        public static final int WhiteText=0x7f090003;
+        public static final int AppTheme=0x7f08000e;
+        public static final int BlackShadow=0x7f080004;
+        public static final int BlackShadow_WhiteText=0x7f08000b;
+        public static final int DarkText=0x7f080000;
+        public static final int GreyText=0x7f080001;
+        public static final int LightGreyText=0x7f080002;
+        public static final int LightShadow=0x7f080005;
+        public static final int LightShadow_BlackText=0x7f080008;
+        public static final int LightShadow_DarkText=0x7f080007;
+        public static final int LightShadow_GreyText=0x7f08000a;
+        public static final int ScoreTextGreen=0x7f08000f;
+        public static final int ScoreTextRed=0x7f080010;
+        public static final int WhiteShadow=0x7f080006;
+        public static final int WhiteShadow_DarkText=0x7f080009;
+        public static final int WhiteText=0x7f080003;
     }
     public static final class xml {
-        public static final int prefs=0x7f050000;
+        public static final int prefs=0x7f040000;
     }
 }

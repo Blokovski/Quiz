@@ -9,8 +9,7 @@
             android:entryValues="@array/listValues"
             android:key="listdiff"
             android:summary="Select you game difficulty"
-            android:title="Game Difficulty"
-            android:defaultValue="1" />
+            android:title="Game Difficulty" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Sound" >
         <CheckBoxPreference

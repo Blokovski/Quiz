@@ -192,8 +192,7 @@ public class MainActivity extends Activity
 		// Toast.makeText(App.getContext(), "Tacan odgovor",
 		// Toast.LENGTH_SHORT).show();
 		playOkSound();
-		createAnimScore(100, "+" + String.valueOf(game.addScore()));
-		;
+		createAnimScore(R.style.ScoreTextGreen, "+" + String.valueOf(game.addScore()));
 		updateScore();
 		game.setQuestionPosition(true);
 		game.incNumberOfAnsweredQuestion();
@@ -211,7 +210,14 @@ public class MainActivity extends Activity
 			gameOver();
 		}
 	}
-
+	
+	private void helpUsed()
+	{
+		playUsedSound();
+		game.removeScore(Rules.HELP_POINTS_PENALTY);
+		createAnimScore(R.style.ScoreTextRed, "-" + String.valueOf(Rules.HELP_POINTS_PENALTY));
+		updateScore();
+	}
 	private void wrongAnswer()
 	{
 		playWrongSound();
@@ -227,10 +233,10 @@ public class MainActivity extends Activity
 	{
 		if (game.getHelpMoreTime() > 0)
 		{
-			playUsedSound();
+			helpUsed();
 			timer.addTimeToCountDown(Rules.ADDITIONAL_TIME_ADD);
 			game.usingHelpMoreTime();
-			game.removeScore(Rules.ADDITIONAL_TIME_POINTS_PENALTY);
+			
 		}
 	}
 
@@ -238,7 +244,7 @@ public class MainActivity extends Activity
 	{
 		if (game.getHelpHalf() > 0)
 		{
-			playUsedSound();
+			helpUsed();
 			int a = game.getAnswerPosition(game.getActualQuestion());
 			int oneMore = -1;
 
@@ -283,7 +289,7 @@ public class MainActivity extends Activity
 	{
 		if (game.getHelpSkip() > 0)
 		{
-			playUsedSound();
+			helpUsed();
 			game.setQuestionPosition(true);
 			game.incNumberOfAnsweredQuestion();
 			game.usingHelpSkip();
@@ -304,13 +310,13 @@ public class MainActivity extends Activity
 		return -1;
 	}
 
-	private void createAnimScore(int speed, String text)
+	private void createAnimScore(int res, String text)
 	{
 
 		final TextView tvScore = new TextView(MainActivity.this);
 		tvScore.setText(text);
 		// tvScore.setTextColor(Color.GREEN);
-		tvScore.setTextAppearance(this, R.style.ScoreTextGreen);
+		tvScore.setTextAppearance(this, res);
 
 		FrameLayout.LayoutParams par = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		tvScore.setLayoutParams(par);

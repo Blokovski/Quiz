@@ -16,7 +16,7 @@ public class Rules
 	public static final int TIME = 60 *1000;
 	public static final int ADDITIONAL_TIME_ADD = 10 *1000;
 	
-	public static final int ADDITIONAL_TIME_POINTS_PENALTY = 500;
+	public static final int HELP_POINTS_PENALTY = 200;
 	
 	public static final int NUMBER_OF_SKIP_EASY = 3;
 	public static final int NUMBER_OF_ADD_TIME_EASY = 3;
