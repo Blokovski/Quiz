@@ -4,5 +4,11 @@
     <string name="app_name">Quiz</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="score">Score:</string>
+    <string name="true_answers">True Answers:</string>
+    <string name="play_again">Play Again</string>
+    <string name="submit_score">Submit your score</string>
+    <string name="time_left">Time left:</string>
+    <string name="game_over">GAME OVER</string>
 
 </resources>

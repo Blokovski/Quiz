@@ -2,13 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
+    
+    
+    
+    
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_below="@+id/game_over"
         android:layout_marginTop="5dp"
         android:orientation="horizontal" >
 
@@ -16,50 +20,85 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="SCORE:" />
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/score" />
 
         <TextView
             android:id="@+id/tvEndScore"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="0" />
+            />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnPlayAgain"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:onClick="onClickPlayAgain"
+        android:padding="10dp"
+        android:text="@string/play_again"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnPlayAgain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:onClick="onClickSubmit"
+        android:padding="10dp"
+        android:text="@string/submit_score"
+        android:textColor="@color/white" />
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/linearLayout2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="33dp"
+        android:layout_below="@+id/linearLayout1"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="True Answers:" />
+            android:text="@string/true_answers"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvEndTrueAnswers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="0" />
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnSubmit"
+    <TextView
+        android:id="@+id/game_over"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_below="@+id/linearLayout2"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/button_selector"
-        android:onClick="onClickSubmit"
-        android:padding="10dp"
-        android:text="Submit your score"
-        android:textColor="@color/white" />
+        android:paddingLeft="10dp"
+        android:text="@string/game_over"
+        android:textColor="@color/grey_dark"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

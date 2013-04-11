@@ -5,122 +5,138 @@
     android:layout_height="fill_parent"
     android:drawingCacheQuality="high" >
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
-
-        <RelativeLayout
-            android:id="@+id/ad_layout_blank"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:visibility="visible" >
-
-            <com.google.ads.AdView
-                android:id="@+id/adView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                ads:adSize="BANNER"
-                ads:adUnitId="a15138bd7e943c5"
-                ads:loadAdOnCreate="true"
-                ads:testDevices="TEST_EMULATOR, 60B656F78594073A1723E2147A03EE28" />
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tvQuestion"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="Question goes here"
-            android:textStyle="bold" />
+        android:layout_height="fill_parent" >
 
         <LinearLayout
-            android:id="@+id/llAnswers"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="fill_parent"
             android:orientation="vertical" >
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:text="SCORE:" />
-
-            <TextView
-                android:id="@+id/tvScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:text="0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/tvTimer"
+            <RelativeLayout
+                android:id="@+id/ad_layout_blank"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:visibility="visible" >
+
+                <com.google.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="a15138bd7e943c5"
+                    ads:loadAdOnCreate="true"
+                    ads:testDevices="TEST_EMULATOR, 60B656F78594073A1723E2147A03EE28" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
                 android:paddingLeft="10dp"
-                android:text="100" />
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llAnswers"
+                android:layout_width="fill_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/score"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/time_left"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/linearLayoutHelps"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnSkipHelp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/netx_button_3"
+                    android:onClick="onClickHelpSkip"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnHalfHelp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/half_3"
+                    android:onClick="onClickHelpHalf"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnAddTimeHelp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/clock_3"
+                    android:onClick="onClickHelpAddTime" />
+            </RelativeLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutHelps"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="23dp"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/btnAddTimeHelp"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_button_selector"
-                android:onClick="onClickHelpAddTime"
-                android:text="Add Time"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btnHalfHelp"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_button_selector"
-                android:onClick="onClickHelpHalf"
-                android:text="50:50"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btnSkipHelp"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="1"
-                android:background="@drawable/main_button_selector"
-                android:onClick="onClickHelpSkip"
-                android:text="Skip"
-                android:textColor="@color/white" />
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

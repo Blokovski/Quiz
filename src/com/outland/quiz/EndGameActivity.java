@@ -1,5 +1,6 @@
 package com.outland.quiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -36,5 +37,13 @@ public class EndGameActivity extends SwarmActivity
 	public void onClickSubmit(View view)
 	{
 		SwarmLeaderboard.submitScoreAndShowLeaderboard(Rules.SWARM_LEADERBORD, game.getScore());
+	}
+	
+	public void onClickPlayAgain(View view)
+	{
+		App.setGame();
+		Intent i = new Intent(this, MainActivity.class);
+		startActivity(i);
+		finish();
 	}
 }

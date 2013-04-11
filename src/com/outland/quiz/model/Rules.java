@@ -13,7 +13,7 @@ public class Rules
 	public static final int MEDIUM_POINTS = 150;
 	public static final int HARD_POINTS = 200;
 	
-	public static final int TIME = 60 *1000;
+	public static final int TIME = 30 *1000;
 	public static final int ADDITIONAL_TIME_ADD = 10 *1000;
 	
 	public static final int HELP_POINTS_PENALTY = 200;

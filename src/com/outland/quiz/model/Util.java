@@ -16,7 +16,7 @@ public class Util
 {
 	public static String getStringFromJsonResource()
 	{
-		InputStream is = App.getContext().getResources().openRawResource(R.raw.generated);
+		InputStream is = App.getContext().getResources().openRawResource(R.raw.nfl);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		try {

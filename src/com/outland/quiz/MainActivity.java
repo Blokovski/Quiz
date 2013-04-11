@@ -8,18 +8,23 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -44,6 +49,15 @@ public class MainActivity extends Activity
 	FrameLayout fl;
 	MediaPlayer mediaPlayer;
 
+	Button btnAddTimeHelp;
+	Button btnHalfHelp;
+	Button btnSkipHelp;
+
+	boolean halfSemafor = false;
+
+	int Measuredwidth = 0;
+	int Measuredheight = 0;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -52,6 +66,7 @@ public class MainActivity extends Activity
 
 		AdView adView = (AdView) this.findViewById(R.id.adView);
 		adView.loadAd(new AdRequest());
+		screenSizecheck();
 
 		tvQuestion = (TextView) findViewById(R.id.tvQuestion);
 		tvTimer = (TextView) findViewById(R.id.tvTimer);
@@ -59,8 +74,13 @@ public class MainActivity extends Activity
 		list = (LinearLayout) findViewById(R.id.llAnswers);
 		fl = (FrameLayout) findViewById(R.id.main_draw);
 
+		btnAddTimeHelp = (Button) findViewById(R.id.btnAddTimeHelp);
+		btnHalfHelp = (Button) findViewById(R.id.btnHalfHelp);
+		btnSkipHelp = (Button) findViewById(R.id.btnSkipHelp);
+
 		game = App.getGame();
 		setQuestion(game.getActualQuestion());
+		updateButtonState();
 
 		timer = new QuizTimer(Rules.TIME, 1000)
 		{
@@ -68,7 +88,7 @@ public class MainActivity extends Activity
 			@Override
 			public void onTick(long time)
 			{
-				tvTimer.setText("seconds remaining: " + time / 1000);
+				tvTimer.setText("" + time / 1000);
 				remainTime = time;
 
 			}
@@ -76,7 +96,7 @@ public class MainActivity extends Activity
 			@Override
 			public void onFinish()
 			{
-				tvTimer.setText("done!");
+				// tvTimer.setText("done!");
 				gameOver();
 
 			}
@@ -93,6 +113,15 @@ public class MainActivity extends Activity
 		{
 			mediaPlayer.release();
 		}
+		timer.stop();
+	}
+
+	@Override
+	public void onPause()
+	{
+		super.onPause();
+		timer.stop();
+
 	}
 
 	private void playOkSound()
@@ -129,6 +158,7 @@ public class MainActivity extends Activity
 			list.removeAllViews();
 			tvQuestion.setText(q.getQuestion());
 			List<String> ans = q.getAnswers();
+			halfSemafor = false;
 			if (ans.size() > 0)
 			{
 				LayoutInflater inflater = (LayoutInflater) App.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -172,6 +202,27 @@ public class MainActivity extends Activity
 		}
 	}
 
+	private void screenSizecheck()
+	{
+		Measuredwidth = 0;
+		Measuredheight = 0;
+		Point size = new Point();
+		WindowManager w = getWindowManager();
+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2)
+		{
+			w.getDefaultDisplay().getSize(size);
+
+			Measuredwidth = size.x;
+			Measuredheight = size.y;
+		} else
+		{
+			Display d = w.getDefaultDisplay();
+			Measuredwidth = d.getWidth();
+			Measuredheight = d.getHeight();
+		}
+	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
@@ -210,7 +261,7 @@ public class MainActivity extends Activity
 			gameOver();
 		}
 	}
-	
+
 	private void helpUsed()
 	{
 		playUsedSound();
@@ -218,6 +269,7 @@ public class MainActivity extends Activity
 		createAnimScore(R.style.ScoreTextRed, "-" + String.valueOf(Rules.HELP_POINTS_PENALTY));
 		updateScore();
 	}
+
 	private void wrongAnswer()
 	{
 		playWrongSound();
@@ -229,6 +281,66 @@ public class MainActivity extends Activity
 		tvScore.setText(String.valueOf(game.getScore()));
 	}
 
+	private void updateButtonState()
+	{
+		switch (game.getHelpMoreTime())
+		{
+		case 3:
+			btnAddTimeHelp.setBackgroundResource(R.drawable.clock_3);
+			break;
+		case 2:
+			btnAddTimeHelp.setBackgroundResource(R.drawable.clock_2);
+			break;
+		case 1:
+			btnAddTimeHelp.setBackgroundResource(R.drawable.clock_1);
+			break;
+		case 0:
+			btnAddTimeHelp.setBackgroundResource(R.drawable.clock_0);
+			break;
+
+		default:
+			break;
+		}
+
+		switch (game.getHelpHalf())
+		{
+		case 3:
+			btnHalfHelp.setBackgroundResource(R.drawable.half_3);
+			break;
+		case 2:
+			btnHalfHelp.setBackgroundResource(R.drawable.half_2);
+			break;
+		case 1:
+			btnHalfHelp.setBackgroundResource(R.drawable.half_1);
+			break;
+		case 0:
+			btnHalfHelp.setBackgroundResource(R.drawable.half_0);
+			break;
+
+		default:
+			break;
+		}
+
+		switch (game.getHelpSkip())
+		{
+		case 3:
+			btnSkipHelp.setBackgroundResource(R.drawable.netx_button_3);
+			break;
+		case 2:
+			btnSkipHelp.setBackgroundResource(R.drawable.netx_button_2);
+			break;
+		case 1:
+			btnSkipHelp.setBackgroundResource(R.drawable.netx_button_1);
+			break;
+		case 0:
+			btnSkipHelp.setBackgroundResource(R.drawable.netx_button_0);
+			break;
+
+		default:
+			break;
+		}
+	}
+
 	public void onClickHelpAddTime(View view)
 	{
 		if (game.getHelpMoreTime() > 0)
@@ -236,53 +348,58 @@ public class MainActivity extends Activity
 			helpUsed();
 			timer.addTimeToCountDown(Rules.ADDITIONAL_TIME_ADD);
 			game.usingHelpMoreTime();
-			
 		}
+		updateButtonState();
 	}
 
 	public void onClickHelpHalf(View view)
 	{
-		if (game.getHelpHalf() > 0)
+		if (!halfSemafor)
 		{
-			helpUsed();
-			int a = game.getAnswerPosition(game.getActualQuestion());
-			int oneMore = -1;
-
-			List<Integer> ansi = new ArrayList<Integer>();
-			ansi.add(0);
-			ansi.add(1);
-			ansi.add(2);
-			ansi.add(3);
-
-			ansi.remove(a);
-
-			boolean cool = false;
-			Random ran = new Random();
-			while (!cool)
+			if (game.getHelpHalf() > 0)
 			{
+				helpUsed();
+				int a = game.getAnswerPosition(game.getActualQuestion());
+				int oneMore = -1;
 
-				int x = ran.nextInt(4);
-				if (x != a)
+				List<Integer> ansi = new ArrayList<Integer>();
+				ansi.add(0);
+				ansi.add(1);
+				ansi.add(2);
+				ansi.add(3);
+
+				ansi.remove(a);
+
+				boolean cool = false;
+				Random ran = new Random();
+				while (!cool)
 				{
-					oneMore = x;
-					cool = true;
+
+					int x = ran.nextInt(4);
+					if (x != a)
+					{
+						oneMore = x;
+						cool = true;
+					}
 				}
+
+				// Toast.makeText(App.getContext(), "Tacan odgovor je pod:" + a,
+				// Toast.LENGTH_SHORT).show();
+				ansi.remove(getPosInIntList(ansi, oneMore));
+
+				List<View> taci = list.getTouchables();
+
+				for (Integer integer : ansi)
+				{
+					View v = taci.get(integer);
+					list.removeView(v);
+				}
+
 			}
-
-			// Toast.makeText(App.getContext(), "Tacan odgovor je pod:" + a,
-			// Toast.LENGTH_SHORT).show();
-			ansi.remove(getPosInIntList(ansi, oneMore));
-
-			List<View> taci = list.getTouchables();
-
-			for (Integer integer : ansi)
-			{
-				View v = taci.get(integer);
-				list.removeView(v);
-			}
-
+			halfSemafor = true;
+			game.usingHelpHalf();
+			updateButtonState();
 		}
-		game.usingHelpHalf();
 	}
 
 	public void onClickHelpSkip(View view)
@@ -295,6 +412,7 @@ public class MainActivity extends Activity
 			game.usingHelpSkip();
 			endCheck();
 		}
+		updateButtonState();
 	}
 
 	private int getPosInIntList(List<Integer> aList, int broj)
@@ -320,7 +438,7 @@ public class MainActivity extends Activity
 
 		FrameLayout.LayoutParams par = new FrameLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		tvScore.setLayoutParams(par);
-		tvScore.setPadding(200, 500, 0, 0);
+		tvScore.setPadding(Measuredwidth/2, Measuredheight/2, 0, 0);
 
 		fl.addView(tvScore);
 

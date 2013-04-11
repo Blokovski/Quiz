@@ -86,7 +86,8 @@ public class Game
 	private void setGameSettings()
 	{
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(App.getContext());
-		difficulty = sharedPref.getInt("listdiff", 1);
+		String s = sharedPref.getString("listdiff", "1");
+		difficulty = Integer.valueOf(s);
 		sound = sharedPref.getBoolean("sound_effect", true);
 	}
 
@@ -237,7 +238,11 @@ public class Game
 
 	public Question getActualQuestion()
 	{
-		return questions.get(this.getQuestionPosition());
+		if (getQuestionPosition() <= questions.size())
+		{
+			return questions.get(this.getQuestionPosition());
+		}
+		return null;
 	}
 
 	public int getQuestionPosition()

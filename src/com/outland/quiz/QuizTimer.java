@@ -16,6 +16,11 @@ abstract class QuizTimer
 
 		mTimer = new MyCountDownTimer(mDeadline, mInterval);
 	}
+	
+	public synchronized void stop()
+	{
+		mTimer.cancel();
+	}
 
 	public synchronized void start()
 	{
