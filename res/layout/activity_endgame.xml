@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/back_2" >
     
     
     
@@ -14,7 +15,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/game_over"
         android:layout_marginTop="5dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+         >
 
         <TextView
             android:layout_width="wrap_content"
@@ -22,14 +24,14 @@
             android:paddingLeft="10dp"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+             android:textColor="@color/white"
             android:text="@string/score" />
 
         <TextView
             android:id="@+id/tvEndScore"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
@@ -75,7 +77,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:text="@string/true_answers"
-            android:textColor="@color/black"
+             android:textColor="@color/white"
             android:textSize="18dp"
             android:textStyle="bold" />
 
@@ -84,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:textColor="@color/black"
+             android:textColor="@color/white"
             android:textSize="18dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -97,7 +99,7 @@
         android:layout_centerHorizontal="true"
         android:paddingLeft="10dp"
         android:text="@string/game_over"
-        android:textColor="@color/grey_dark"
+         android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold" />
 
